@@ -1,4 +1,29 @@
 .UserInfo {
   padding-top: 60px;
   width: 400px;
+
+  .contactLabel {
+    font-size: 18px;
+    color: #888888;
+    padding-top: 10px;
+  }
+
+  .userInfoList {
+    ul {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+
+      .itemName {
+        font-weight: bold;
+      }
+
+      .itemValue {
+        color: #0095f6;
+        cursor: pointer;
+      }
+    }
+
+
+  }
 }
