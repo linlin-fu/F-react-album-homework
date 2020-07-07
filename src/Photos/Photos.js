@@ -25,7 +25,7 @@ class Photos extends Component {
       <section className="photos primaryScrollbar">
         <Grid container spacing={2}>
           {photos.map((photo) => (
-            <Grid item sm={4} className="photo">
+            <Grid item sm={4} className="photo" key={photo.id}>
               <img src={photo.url} alt={photo.title} />
               <p className="photoTitle">{photo.title}</p>
             </Grid>

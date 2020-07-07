@@ -8,6 +8,7 @@ class Albums extends Component {
     super(props);
     this.state = {
       albums: [],
+      selectedAlbumId: 1,
     };
   }
 
@@ -15,18 +16,27 @@ class Albums extends Component {
     fetchAlbums().then((albums) => {
       this.setState({
         albums,
+        selectedAlbumId: 1,
       });
     });
   }
 
   render() {
-    const { albums } = this.state;
+    const { albums, selectedAlbumId } = this.state;
     return (
       <section className="Albums">
         {albums.map((album) => (
-          <div className="album">
+          <div
+            key={album.id}
+            className="album"
+            onClick={() =>
+              this.setState({
+                selectedAlbumId: album.id,
+              })
+            }
+          >
             <p className="title">{album.title}</p>
-            <Photos id={album.id} />
+            {selectedAlbumId === album.id ? <Photos id={album.id} /> : ''}
           </div>
         ))}
       </section>
