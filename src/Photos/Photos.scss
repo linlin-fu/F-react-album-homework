@@ -1,0 +1,37 @@
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height:400px;
+  padding-top: 20px;
+
+  .photo {
+
+    img {
+      width: 160px;
+      height: 160px;
+    }
+
+    .photoTitle {
+      color: #0095f6;
+    }
+  }
+}
+
+.primaryScrollbar::-webkit-scrollbar {
+  width: 2px;
+}
+
+.primaryScrollbar::-webkit-scrollbar-track {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.primaryScrollbar::-webkit-scrollbar-thumb {
+  background-color: #023d67;
+  border-radius: 13px;
+}
+
+

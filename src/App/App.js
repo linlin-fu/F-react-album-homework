@@ -27,8 +27,8 @@ class App extends Component {
       <div data-testid="app" className="App">
         <Header user={user} />
         <main className="content">
-          <Albums />
-          <UserInfo />
+          <Albums userId={user.id} />
+          <UserInfo user={user} />
         </main>
       </div>
     );
